@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+     <!-- google fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pacifico&display=swap" rel="stylesheet">
+     <!-- Material Icons -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- Actual Materialize design: CDN LINK -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <!-- custom css -->
+     <link rel="stylesheet" href="../css/style.css" />
+    
+</head>
+<body>
+    <section class="fnavbar">
+        <nav class="nav-fixed">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">WatchLand</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul id="nav-mobile" class="list-style">
+                <li><a href="../index.html">Home</a></li>
+                <li><p class="list-text-style"><i class="material-icons" style="font-size: 20px; color: white; ">home</i></p></li>
+                
+                <li><a href="../index.html">About Us</a></li>
+                <li><p class="list-text-style"><i class="material-icons" style="font-size: 20px; color: white; ">person</i></p></li>
+                
+                
+                <li><a href="./signin.html">Sign In</a></li>
+                <li><p class="list-text-style"><i class="material-icons" style="font-size: 20px; color: white; ">star</i></p></li>
+                
+                <li><a href="../index.html">Reviews</a></li>
+                <li><p class="list-text-style"><i class="material-icons" style="font-size: 20px; color: white; ">person</i></p></li>
+
+            </ul>
+            </div>
+          </nav>
+        
+          <ul class="sidenav" id="mobile-demo">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html">About Us</a></li>
+                <li><a href="./signin.html">Sign In</a></li>              
+                <li><a href="../index.html">Reviews</a></li>
+
+               
+          </ul>
+       </section> 
+       <br>
+       
+    <section class="container" style="background-color: #002333;">
+        <h3 style="color: white;">Sign Up</h3>
+            <div>  
+            <form action="../insert.php" method="POST">
+               
+                <div class="modal-content">
+                        <div class="form-group designform">
+                            <br>
+                           <br>
+                            <label for="exampleInputEmail1" style="padding-left: 20px;">First Name</label>
+                            <input type="text" name="fname" class="form-control" id="exampleInputEmail1" 
+                            aria-describedby="emailHelp" style="color: white; padding-left: 20px;" minlength="3" maxlength="20" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" style="padding-left: 20px;">Last Name</label>
+                            <input type="text" name="lname" class="form-control" id="exampleInputEmail1" 
+                            aria-describedby="emailHelp" style="color: white; padding-left: 20px;" minlength="3" maxlength="20" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" style="padding-left: 20px;">Email address</label>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" 
+                            aria-describedby="emailHelp" style="color: white; padding-left: 20px;" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" style="padding-left: 20px;">Password</label>
+                            <input type="password" name="pass"  class="form-control" id="exampleInputPassword1"
+                            style="color: white; padding-left: 20px;" minlength="10" maxlength="20" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" style="padding-left: 20px;">Mobile number</label>
+                            <input name="number"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            type = "number"
+                            maxlength = "10" class="form-control" id="exampleInputEmail1" 
+                             aria-describedby="emailHelp" style="color: white; padding-left: 20px;" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1" style="padding-left: 20px;">Address</label>
+                            <textarea class="form-control" style="color: white;" id="exampleFormControlTextarea1" rows="3" name="address" required></textarea>
+                          </div>
+                          <br>
+
+                          <div>
+                          <select class="browser-default custom-select required" style="color: white; background-color: #002333;" name="skill" >
+                            <option disabled="disabled" style="color: white;" >Select Skill</option>
+                            <option value="Acting" style="color: white;" >Acting</option>
+                            <option value="Badminton" style="color: white;">Badminton</option>
+                            <option value="Animation" style="color: white;">Animation</option>
+                            <option value="Baking" style="color: white;">Baking</option>
+                            <option value="Blogging" style="color: white;">Blogging</option>
+                            <option value="Calligraphy" style="color: white;">Calligraphy</option>
+                            <option value="Creative writing" style="color: white;">Creative writing</option>
+                            <option value="Drawing" style="color: white;">Drawing</option>
+                            <option value="Graphic design" style="color: white;">Graphic design</option>
+                            <option value="Photography" style="color: white;">Photography</option>
+                            <option value="Paper Quilling" style="color: white;">Paper Quilling</option>
+                           
+                          </select>
+                        </div>   
+                            <br><br>
+                        <div class="modal-footer">
+                            <button type="submit" style="background-color: #004666; margin-top: 10px; margin-bottom: 20px; margin-left: 45%;" name="insertdata" class="btn btn-primary">Submit</button>
+                        </div> 
+                            
+                        </form>
+                    </div>    
+    </section>
+    <br>
+    <br>
+    <br>
+
+    <section class="footer">
+        <footer class="footer-one">
+            <div class="container">
+                <div class="row">
+                     <div class="col l6 s12">
+                         <h4 class="white-text">Contact Us</h4>
+                         <p class="grey-text" >
+                           <i class="material-icons" style="font-size: 30px; color: white; ">location_city</i>
+                            ABC 507, Delhi, India
+                         </p>
+                         
+                         <p class="grey-text">
+                             <i class="material-icons" style="font-size: 30px; color: white; ">call</i>
+                             +919999999999
+                         </p>
+                     </div>
+                     <div class="col l6 s12">
+                         <h4 class="white-text">Social Media</h4>
+                         <ul>
+                             <li><a href="#" class="grey-text">Facebook</a></li>
+                             <li><a href="#" class="grey-text">Instagram</a></li>
+                             <li><a href="#" class="grey-text">Twitter</a></li>
+                         </ul>
+                     </div>
+                </div>
+            </div>
+            <div class="row footer-two">
+             <div class="col l6 s12">
+                 <p class="white-text">&copy; WatchLand</p>
+             </div>
+             <div class="col l6 s12">
+                 <p class="white-text right">Designed By Ankita</p>
+             </div>
+         </div>
+        </footer>
+    </section>
+    <section class="infomodal">
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <h4 id="info-modal-heading">Link Disabled</h4>
+                <p id="modal-modal-content">Sorry all links are disabled as of now</p>
+            </div>   
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>             
+        </div>
+    </section>
+    
+</body>
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  <!-- M script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- custom js -->
+  <script src="./loader.js"></script>
+</html>
